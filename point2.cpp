@@ -41,7 +41,7 @@ int main()
     q.show();
     Point p{4,7};
     p.show();
-    point z=p;
+    Point z=p;
     z.show();
     Point r=p.add(q);
     r.show();

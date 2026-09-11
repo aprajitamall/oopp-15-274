@@ -13,12 +13,13 @@ public:
         hh = h;
         mm = m;
         ss = s;
+
     }
 
     
     void show()
     {
-        cout << hh << ":" << mm << ":" << ss << endl;
+        cout << hh << ":" << mm << ":" << ss<<endl;
     }
 };
 

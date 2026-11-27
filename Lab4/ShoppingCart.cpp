@@ -47,8 +47,41 @@ void applyDiscount(vector<Item>& cart)
             item.price = item.price * 0.90;
     }
 }
+void displayBill(const vector<Item>& cart)
+{
+    cout << "\n--- Final Bill ---\n";
+
+    displayCart(cart);
+
+    cout << fixed << setprecision(2);
+    cout << "Updated Total: Rs. "
+         << calculateTotal(cart) << endl;
+}
 
 int main()
 {
+    vector<Item> cart = {
+        {"Laptop", 1, 50000},
+        {"Mouse", 2, 500},
+        {"Keyboard", 1, 1500},
+        {"Bag", 1, 800}
+    };
+
+    cout << "--- Shopping Cart ---\n";
+    displayCart(cart);
+
+    cout << "\nTotal Amount: Rs. "
+         << calculateTotal(cart) << endl;
+
+    auto expensive = findMostExpensiveItem(cart);
+
+    cout << "Most Expensive Item: "
+         << expensive.name << endl;
+
+    applyDiscount(cart);
+
+    cout << "\nAfter Applying Discount:\n";
+    displayBill(cart);
+
     return 0;
 }
